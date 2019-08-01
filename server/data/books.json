@@ -1,0 +1,76 @@
+[{
+  "id": "1",
+  "name": "Con Air",
+  "genre": "Sci-Fi",
+  "authorId": "4"
+}, {
+  "id": "2",
+  "name": "Back from Eternity",
+  "genre": "Action",
+  "authorId": "3"
+}, {
+  "id": "3",
+  "name": "Fantomas",
+  "genre": "Fantasy",
+  "authorId": "8"
+}, {
+  "id": "4",
+  "name": "Home on the Range",
+  "genre": "Fantasy",
+  "authorId": "6"
+}, {
+  "id": "5",
+  "name": "Village of the Damned",
+  "genre": "Fantasy",
+  "authorId": "2"
+}, {
+  "id": "6",
+  "name": "Horseman on the Roof, The (Hussard sur le toit, Le)",
+  "genre": "Horror",
+  "authorId": "6"
+}, {
+  "id": "7",
+  "name": "Break Up",
+  "genre": "Fantasy",
+  "authorId": "2"
+}, {
+  "id": "8",
+  "name": "Teacher's Pet",
+  "genre": "Sci-Fi",
+  "authorId": "7"
+}, {
+  "id": "9",
+  "name": "Big Lebowski, The",
+  "genre": "Horror",
+  "authorId": "3"
+}, {
+  "id": "10",
+  "name": "Young Mr. Lincoln",
+  "genre": "Fantasy",
+  "authorId": "7"
+}, {
+  "id": "11",
+  "name": "Hotte in Paradise (Hotte im Paradies)",
+  "genre": "Fantasy",
+  "authorId": "6"
+}, {
+  "id": "12",
+  "name": "Tough Ones, The (Häjyt)",
+  "genre": "Biography",
+  "authorId": "2"
+}, {
+  "id": "13",
+  "name": "Coven",
+  "genre": "Biography",
+  "authorId": "4"
+}, {
+  "id": "14",
+  "name": "Sinivalkoinen valhe",
+  "genre": "Sci-Fi",
+  "authorId": "4"
+}, {
+  "id": "15",
+  "name": "Steal Big, Steal Little",
+  "genre": "Biography",
+  "authorId": "5"
+}]
