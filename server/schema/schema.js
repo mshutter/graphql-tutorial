@@ -4,15 +4,14 @@ const {
 	GraphQLString,
 	GraphQLSchema,
 	GraphQLID,
-	GraphQLInt
+	GraphQLInt,
+	GraphQLList
 } = graphql;
 const _ = require('lodash');
 
 // dummy data
 const BOOKS = require('../data/books.json');
 const AUTHORS = require('../data/authors.json');
-
-console.log(BOOKS)
 
 
 /**
@@ -38,10 +37,18 @@ const BookType = new GraphQLObjectType({
 })
 const AuthorType = new GraphQLObjectType({
 	name: 'Author',
+
+	// need to wrap in function to implement JIT typing
 	fields: () => ({
 		id: { type: GraphQLID },
 		name: { type: GraphQLString },
-		age: { type: GraphQLInt }
+		age: { type: GraphQLInt },
+		books: {
+			type: new GraphQLList(BookType),
+			resolve (parent, args) {
+				return _.filter(BOOKS, { authorId: parent.id });
+			}
+		}
 	})
 })
 
@@ -56,11 +63,23 @@ const RootQuery = new GraphQLObjectType({
 				return _.find(BOOKS, { id: args.id });
 			}
 		},
+		books: {
+			type: new GraphQLList(BookType),
+			resolve (parent, args) {
+				return BOOKS;
+			}
+		},
 		author: {
 			type: AuthorType,
 			args: { id: { type: GraphQLID } },
 			resolve (parent, args) {
 				return _.find(AUTHORS, { id: args.id });
+			}
+		},
+		authors: {
+			type: new GraphQLList(AuthorType),
+			resolve (parent, args) {
+				return AUTHORS;
 			}
 		}
 	}

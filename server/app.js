@@ -6,6 +6,10 @@ const app = express();
 
 app.use('/graphql', graphqlHTTP({
 	schema,
+
+	// documentation expander is huge!
+	// imagine you need to buld a front end for an unfamiliar API
+	
 	graphiql: true
 }))
 
